@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="Container">
       <h1>Let's play ball</h1>
-      <p>{apiKey}</p>
     </div>
 
     
