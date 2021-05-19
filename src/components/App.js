@@ -4,12 +4,16 @@ import {
   Route,
   Switch
  } from 'react-router-dom';
+ import apiKey from '../config';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Container">
       <h1>Let's play ball</h1>
+      <p>{apiKey}</p>
     </div>
+
+    
 
   );
 }
