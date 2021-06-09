@@ -1,22 +1,30 @@
-import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import apiKey from '../config';
-
+import React from "react";
+import { Redirect, Route, Switch, withRouter } from "react-router-dom";
+import apiKey from "../config";
 
 //  App Components
-import Search from './Search';
-import Nav from './Nav';
-import PhotoContainer from './PhotoContainer';
+import Search from "./Search";
+import Nav from "./Nav";
+import PhotoContainer from "./photos/PhotoContainer";
 
-const App = () => (
-  <HashRouter>
-    <div className="container">
-      <Search />
-      <Nav />
-      
-    </div>
-  
-  </HashRouter>  
-);
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      photos: [],
+      loading: true,
+    };
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <Search />
+        <Nav />
+        <PhotoContainer />
+      </div>
+    );
+  }
+}
 
 export default App;

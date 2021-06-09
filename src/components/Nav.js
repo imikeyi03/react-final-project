@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, NavLink,Redirect } from 'react-router-dom';
 
-import PhotoContainer from './photos/PhotoContainer';
+
 
 const Nav = (props) => (
     <nav class="main-nav">
         <ul>
-            <li><NavLink to="#">Biceps</NavLink></li>
-            <li><NavLink to="#">Chest</NavLink></li>
-            <li><NavLink to="#">Legs</NavLink></li>
+            <li><NavLink to="#">Technology</NavLink></li>
+            <li><NavLink to="#">Cameras</NavLink></li>
+            <li><NavLink to="#">Computers</NavLink></li>
         </ul>
     </nav>
     
