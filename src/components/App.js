@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import axios from "axios";
 import apiKey from "../config";
 
@@ -36,11 +36,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="container">
-        <h1>React Gallery App</h1>
         <Search getPhotos= {getPhotos} />
         <Nav />
         <Switch>
-          <Redirect exact from ="/" to="/technology" />
+          <Route exact path="/" />
           <Route exact path ="/:searchQuery">
             <PhotoContainer
               loading={loading}
