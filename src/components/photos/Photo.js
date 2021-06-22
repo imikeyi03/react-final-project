@@ -3,7 +3,7 @@ import React from 'react'
 const Photo = (props) => {
     return (
         <li>
-            <img className="photo" src={props.data.url} />
+           <img src={`https://live.staticflickr.com/${props.server}/${props.id}_${props.secret}.jpg`} alt="" />
         </li>        
     )
 }
