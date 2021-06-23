@@ -1,3 +1,18 @@
+# React Flicker API App
+In this project, I needed to leverage everything we have learned about React Components Routing, State, and Props. Alongside the project, I havd to pull the photos from the flicker api using a config.js file to hold my unique api key with axios as the main driver for fetching the data.
+
+This project is initialized with create-react-app. I wanted to learn how to use the latest edition to React, React Hooks, so you will find calls to UseState and UseEffect in this project.
+
+## App Configuration Requirements
+Users will need to provide their own api key credentials in their own instances of the application. You can grab a NON-COMMERCIAL API key for free at https://www.flickr.com/services/apps/create/apply
+
+- Create a config.js file in the /src folder to hold their own API credentials
+
+```javaScript
+  const apiKey = "YOUR OWN API KEY"
+  export default apiKey;
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
