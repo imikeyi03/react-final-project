@@ -5,16 +5,18 @@ import Photo from './Photo';
 import NotFound from "../NotFound";
 
 
-
+// Destructured props
 const PhotoContainer = ({getPhotos, photos, loading}) => {
     
     let searchQuery = useParams().searchQuery;
     
+    // Set useEffect with searchQuery and getPhotos dependencies
     useEffect(() => {
         getPhotos(searchQuery)
-       
-    }, [searchQuery]);
 
+    }, [searchQuery, getPhotos]);
+
+    // Map over photos pulled from Flicker leveraging the photo component
     let photoComponent = photos.map(photo => (
         <Photo
             key={photo.id} 

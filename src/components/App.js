@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import axios from "axios";
 import apiKey from "../config";
@@ -16,8 +16,9 @@ const App = () => {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   
-  // Axios Flicker Request
-  const getPhotos = (searchQuery) => {
+  // Axios Flicker request with updating state dependencies using useCallback
+  const getPhotos = useCallback(
+    (searchQuery) => {
     // Set loading State to true while getting photo data from Flicker
     setLoading(true);
     axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${searchQuery}&per_page=24&format=json&nojsoncallback=1`)
@@ -28,8 +29,10 @@ const App = () => {
       .catch(error => {
         console.log("Error fetching data: ", error)
       })
+    },
+    [setPhotos],
+  )
 
-  }
   
   
   // Routes and component structure
