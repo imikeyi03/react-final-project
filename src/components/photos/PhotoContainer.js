@@ -38,7 +38,7 @@ const PhotoContainer = ({getPhotos, photos, loading}) => {
     // Shows "Loading..." while data is being fetched
     return (
         <div className="photo-container">
-            <h2>Photos of {searchQuery}</h2>
+            <h2>Results</h2>
             {
                 (loading) ? <h1>Loading...</h1> : render()
             }

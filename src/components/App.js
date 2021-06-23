@@ -39,6 +39,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="container">
+        <h1>Flicker Gallery</h1>
         <Search getPhotos= {getPhotos} />
         <Nav />
         <Switch>
